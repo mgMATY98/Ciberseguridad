@@ -24,18 +24,16 @@ Ya por ultimo le damos a termina y estaria
 PASO 3: Instalar y terminar de configurar Kali  
 Aunque ya tengamos Kali en la maquina virtual es necesario una vez terminado, abrir la maquina y configurar el SO  
 Entraremos a la instalacion de Kali  
-![image](https://github.com/user-attachments/assets/88b593fb-29bf-4389-9a22-535f7555878d)
+
 Apretamos en instalacion grafica y luego elegiremos el idioma, la localizacion y el tipo de teclado
-![image](https://github.com/user-attachments/assets/eb084641-3cbe-4613-96ee-4a214f27e772)
-![image](https://github.com/user-attachments/assets/5d8adf64-b56c-4e11-8515-366bd3e283e7)
-![image](https://github.com/user-attachments/assets/1ec7545a-a5d6-4ba5-b810-fedf9396656a)
+
 Continuamos y ya se instalara Kali  
 Luego elegimos el nombre de host  
-![image](https://github.com/user-attachments/assets/4c86b641-26c8-4470-a12b-9bcfa6e7c228)
+
 El nombre de usuario
-![image](https://github.com/user-attachments/assets/d8ff1824-d30f-4e52-82ab-a884092d320a)
+
 Y la contraseña
-![image](https://github.com/user-attachments/assets/870b963d-7e36-46e8-befc-93057bbc1d16)
+
 Una vez hecho esto ya terminariamos de configurar e instalar nuestro Kali  
 Para windows es exactamente igual  
 PASO 4: establecer una red NAT entre la maquina windows y la kali  
@@ -55,9 +53,9 @@ Vamos a la maquina Kali (y luego windows), seleccionamos RED, RED NAT y le asiga
 Y ya estaria hecha la conexion entre ambas maquinas  
 Ahora para verificar la conexion hacemos un ping a ambas maquinas a ver si hay respuesta  
 Windows a kali:
-![image](https://github.com/user-attachments/assets/bc8a47f0-7b05-4f82-b76e-ce57dd922da9)
+
 Sin problema, ahora al reves, kali a windows
-![image](https://github.com/user-attachments/assets/4991db6d-a082-4ced-82a6-b2caf00ddaa1)
+
 Perfecto todo configurado  
 Hasta la proxima
 

@@ -24,16 +24,18 @@ Ya por ultimo le damos a termina y estaria
 PASO 3: Instalar y terminar de configurar Kali  
 Aunque ya tengamos Kali en la maquina virtual es necesario una vez terminado, abrir la maquina y configurar el SO  
 Entraremos a la instalacion de Kali  
-
+![VirtualBox_kali_30_06_2025_14_50_27](https://github.com/user-attachments/assets/c5a3592c-a56c-41a0-bdcc-c9f21f3d00dd)
 Apretamos en instalacion grafica y luego elegiremos el idioma, la localizacion y el tipo de teclado
-
+![VirtualBox_kali_30_06_2025_14_52_01](https://github.com/user-attachments/assets/c7afffd3-27a7-4fd5-b511-aad79cae81d9)
+![VirtualBox_kali_30_06_2025_14_52_15](https://github.com/user-attachments/assets/0f9202fb-a686-4103-b119-85336744809b)
+![VirtualBox_kali_30_06_2025_14_52_26](https://github.com/user-attachments/assets/d2ea009e-4201-4889-84ee-3a3077575385)
 Continuamos y ya se instalara Kali  
 Luego elegimos el nombre de host  
-
+![VirtualBox_kali_30_06_2025_14_54_23](https://github.com/user-attachments/assets/a918bb48-8df9-486a-8c44-64ecc7a5188c)
 El nombre de usuario
-
+![VirtualBox_kali_30_06_2025_14_54_42](https://github.com/user-attachments/assets/b70fbf2d-fb79-475f-94bf-dba01d4627d9)
 Y la contraseña
-
+![VirtualBox_kali_30_06_2025_14_54_53](https://github.com/user-attachments/assets/aa3214ee-487e-498f-aa56-d5d623a41e26)
 Una vez hecho esto ya terminariamos de configurar e instalar nuestro Kali  
 Para windows es exactamente igual  
 PASO 4: establecer una red NAT entre la maquina windows y la kali  
@@ -53,9 +55,9 @@ Vamos a la maquina Kali (y luego windows), seleccionamos RED, RED NAT y le asiga
 Y ya estaria hecha la conexion entre ambas maquinas  
 Ahora para verificar la conexion hacemos un ping a ambas maquinas a ver si hay respuesta  
 Windows a kali:
-
+![VirtualBox_Win10_30_06_2025_15_02_43](https://github.com/user-attachments/assets/dde137fa-b4de-4e59-82a5-abf0c3025c3c)
 Sin problema, ahora al reves, kali a windows
-
+![VirtualBox_Kali Linux_30_06_2025_15_05_22](https://github.com/user-attachments/assets/7156741c-d912-4a72-9081-51ba51f6d195)
 Perfecto todo configurado  
 Hasta la proxima
 

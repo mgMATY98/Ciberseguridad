@@ -3,8 +3,8 @@ Crear un entorno de laboratorio con máquinas virtuales en red interna para real
 
 Buenos dias
 Para empezar deberemos de usar un entorno virtualizado debido a que, usar nuestras propias maquinas conllevaria ciertos riesgos, ademas la manipulacion de estos entornos es mucho mas sencillo
-y seguro
-DESCARGA DE VIRTUAL BOX MACHINE
+y seguro  
+DESCARGA DE VIRTUAL BOX MACHINE  
 Descargamos nuestro entorno virtualizado en este caso virtualBoxMachine y lo instalamos
 ![image](https://github.com/user-attachments/assets/b3350700-b07a-4be0-a68b-97501025da38)
 Una vez hecho quedara de la siguiente manera (yo ya tengo varias maquinas virtuales instaladas):

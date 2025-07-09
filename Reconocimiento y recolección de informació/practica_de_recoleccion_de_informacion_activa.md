@@ -24,7 +24,7 @@ Después de escanear la red con netdiscover, identifiqué los hosts activos en e
 A continuación voy a realizar pruebas adicionales (ping y nmap) sobre ambas para confirmar cuál de ellas era la máquina Windows 10 objetivo. En un entorno real esto se hace observando los servicios detectados y los puertos abiertos característicos del sistema operativo del objetivo.  
 Paso 2: hacer un ping a las ip de los host descubiertos para ver si estan activos   
 ![pingVerificacion](https://github.com/user-attachments/assets/5c99a8d5-b7f7-4541-8247-eec37cc362d7)
-Al estar ambos host activos no puedo identificar a mi objetivo, para determinar cuál de ellos corresponde a la máquina objetivo, realizare un escaneo activo de puertos utilizando nmap para ver los puertos y servicios activos.
+Al estar ambos host activos no puedo identificar a mi objetivo, para determinar cuál de ellos corresponde a la máquina objetivo, realizare un escaneo activo de puertos utilizando nmap para ver los puertos y servicios activos.  
 Pase 3: realizar un escaneo rapido a ambas maquinas  
 Para esto uso nmap y pongo la ip objetivo (10.0.2.3/10.0.2.5)  
 ![Nmap](https://github.com/user-attachments/assets/18351c16-bfa9-4a7d-9271-6933ee40d77f)
@@ -34,7 +34,7 @@ La IP 10.0.2.5 presentó puertos abiertos típicos de un sistema Windows:
 139/tcp (netbios-ssn): NetBIOS Session Service.  
 445/tcp (microsoft-ds): Microsoft Directory Services (SMB).  
 Por lo tanto, se determinó que la IP 10.0.2.5 corresponde a la máquina Windows 10 objetivo.  
-Paso 3: hacer un escaneo de profundidad con nmap para ver mas datos sobre el objetivo.  
+Paso 4: hacer un escaneo de profundidad con nmap para ver mas datos sobre el objetivo.  
 Para eso necesito agregar algunas cosas a la orden de escaneo de Nmap, en la misma consola de comandos agrego:  
 Nmap -sS -sV -O -Pn  
 Explicación de las opciones:  

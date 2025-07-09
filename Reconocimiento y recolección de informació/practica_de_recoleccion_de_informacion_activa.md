@@ -23,18 +23,39 @@ Después de escanear la red con netdiscover, identifiqué los hosts activos en e
 10.0.2.3 y 10.0.2.5: máquinas virtuales activas en la red.  
 A continuación voy a realizar pruebas adicionales (ping y nmap) sobre ambas para confirmar cuál de ellas era la máquina Windows 10 objetivo. En un entorno real esto se hace observando los servicios detectados y los puertos abiertos característicos del sistema operativo del objetivo.  
 Paso 2: hacer un ping a las ip de los host descubiertos para ver si estan activos  
+Esto se realiza unicamente poniendo nmap y la direccion ip a escanear.  
 ![pingVerificacion](https://github.com/user-attachments/assets/5c99a8d5-b7f7-4541-8247-eec37cc362d7)
 Al estar ambos host activos no puedo identificar a mi objetivo, para determinar cuál de ellos corresponde a la máquina objetivo, realizare un escaneo activo de puertos utilizando nmap para ver los puertos y servicios activos.  
 ![Nmap](https://github.com/user-attachments/assets/18351c16-bfa9-4a7d-9271-6933ee40d77f)
 La IP 10.0.2.3 no mostró ningún puerto abierto conocido y todos los puertos TCP reportaron estado filtered, lo que indica que no hay servicios comunes accesibles. Esto no coincide con el comportamiento esperado para una maquina activa, ya que por defecto no tiene servicios escuchando.  
 La IP 10.0.2.5 presentó puertos abiertos típicos de un sistema Windows:
-
 135/tcp (msrpc): Remote Procedure Call.  
-
 139/tcp (netbios-ssn): NetBIOS Session Service.  
-
 445/tcp (microsoft-ds): Microsoft Directory Services (SMB).  
-
 Por lo tanto, se determinó que la IP 10.0.2.5 corresponde a la máquina Windows 10 objetivo.  
 Paso 3: hacer un escaneo de profundidad con nmap para ver mas datos sobre el objetivo.  
-
+Para eso necesito agregar algunas cosas a la orden de escaneo de Nmap, en la misma consola de comandos agrego:  
+Nmap -sS -sV -O -Pn  
+Explicación de las opciones:  
+-sS: escaneo SYN (rápido y sigiloso).  
+-sV: intenta determinar las versiones de los servicios.  
+-O: intenta determinar el sistema operativo.  
+-Pn: no hace ping antes (por si ICMP está bloqueado). 
+El resultado fue:  
+![NmapWin](https://github.com/user-attachments/assets/1fce0b6d-4d83-4667-8c90-7bf398c30bdf)
+El escaneo identificó al host 10.0.2.5 como un sistema Windows 10, con las siguientes características:  
+Sistema operativo: Microsoft Windows 10, versiones aproximadas entre 1709 y 21H2.  
+Nombre del host: DESKTOP-5FKQ764.  
+Grupo de trabajo: WORKGROUP.  
+Distancia en la red: 1 salto (lo que confirma que estamos en la misma red local virtual).  
+Y se detectaron los siguientes servicios, ademas de los puertos referentes a cada uno:  
+135/tcp Microsoft RPC: servicio fundamental para procesos remotos  
+139/tcp NetBIOS: usado para compartir archivos/impresoras en redes Windows  
+445/tcp SMB: protocolo para compartir archivos, impresoras y autenticación  
+En esta etapa se confirmó que la máquina objetivo corresponde a un equipo con Microsoft Windows 10 ejecutando servicios comunes de red asociados a Windows. Esta información es clave para planificar los siguientes pasos en un pentest, ya que permite enfocar las pruebas sobre servicios específicos y vulnerabilidades conocidas para ese sistema operativo.  
+Conclusion:  
+En esta fase inicial del pentest interno se logró realizar una recolección activa de información sobre la máquina objetivo, utilizando técnicas y herramientas estándar como netdiscover y nmap.  
+De esta forma, se identificaron los puertos abiertos y servicios activos, así como el sistema operativo y su versión aproximada. Estos datos (asi como los recolectados de forma pasiva) son fundamentales para construir un perfil del objetivo, entender la superficie de ataque disponible y priorizar los vectores más probables de compromiso.  
+Además, contar con esta información permite investigar las vulnerabilidades específicas asociadas a cada servicio y versión del sistema operativo, sentando las bases para las siguientes etapas del pentest: enumeración avanzada, explotación de vulnerabilidades y post-explotación.  
+En las próximas pruebas, se explorarán las vulnerabilidades detectadas, demostrando cómo podrían ser explotadas para obtener acceso no autorizado y comprometer el sistema objetivo.  
+Muchas gracias

@@ -22,10 +22,11 @@ Después de escanear la red con netdiscover, identifiqué los hosts activos en e
 10.0.2.1 y 10.0.2.2: direcciones del router virtual y servicios internos de VirtualBox.  
 10.0.2.3 y 10.0.2.5: máquinas virtuales activas en la red.  
 A continuación voy a realizar pruebas adicionales (ping y nmap) sobre ambas para confirmar cuál de ellas era la máquina Windows 10 objetivo. En un entorno real esto se hace observando los servicios detectados y los puertos abiertos característicos del sistema operativo del objetivo.  
-Paso 2: hacer un ping a las ip de los host descubiertos para ver si estan activos  
-Esto se realiza unicamente poniendo nmap y la direccion ip a escanear.  
+Paso 2: hacer un ping a las ip de los host descubiertos para ver si estan activos   
 ![pingVerificacion](https://github.com/user-attachments/assets/5c99a8d5-b7f7-4541-8247-eec37cc362d7)
-Al estar ambos host activos no puedo identificar a mi objetivo, para determinar cuál de ellos corresponde a la máquina objetivo, realizare un escaneo activo de puertos utilizando nmap para ver los puertos y servicios activos.  
+Al estar ambos host activos no puedo identificar a mi objetivo, para determinar cuál de ellos corresponde a la máquina objetivo, realizare un escaneo activo de puertos utilizando nmap para ver los puertos y servicios activos.
+Pase 3: realizar un escaneo rapido a ambas maquinas  
+Para esto uso nmap y pongo la ip objetivo (10.0.2.3/10.0.2.5)  
 ![Nmap](https://github.com/user-attachments/assets/18351c16-bfa9-4a7d-9271-6933ee40d77f)
 La IP 10.0.2.3 no mostró ningún puerto abierto conocido y todos los puertos TCP reportaron estado filtered, lo que indica que no hay servicios comunes accesibles. Esto no coincide con el comportamiento esperado para una maquina activa, ya que por defecto no tiene servicios escuchando.  
 La IP 10.0.2.5 presentó puertos abiertos típicos de un sistema Windows:

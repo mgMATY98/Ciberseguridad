@@ -16,4 +16,12 @@ Empecemos por su facebook, repito la busqueda pero ahora en site pondre instagra
 Voy a entrar a la primer opcion a ver que me aparece  
 ![image](https://github.com/user-attachments/assets/d7e8696d-bbff-4dd5-a2fb-cb6e129062b7)
 Es el, ademas tiene su perfil publico lo que me permite ver toda su informacion como sus contactos mas cercanos, interacciones, grupos que frecuenta y mucho mas, basicamente toda su informacion  
-Ya tengo datos mas que necesarios para poder usarlos a mi favor en algun ataque de pishing (ingenieria social) para mi beneficio.
+Ya tengo datos mas que necesarios para poder usarlos a mi favor en algun ataque de pishing (ingenieria social) para mi beneficio.  
+Conclusion:  
+Durante la práctica, se logró identificar información pública relevante sobre el objetivo, incluyendo su nombre completo, puesto de trabajo, lugar de residencia y presencia en distintas redes sociales (LinkedIn, Facebook).  
+Estos datos fueron obtenidos a través de búsquedas en Google, operadores avanzados (Google Dorks) y revisión de perfiles abiertos en redes sociales.  
+Esta fase permitió:  
+Construir un perfil detallado de la persona y su contexto profesional.  
+Comprender la posible relación del usuario con la infraestructura objetivo.  
+Identificar posibles vectores de ataque social, como phishing dirigido o ingeniería social.  
+Muchas gracias
